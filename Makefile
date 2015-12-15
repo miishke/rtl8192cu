@@ -81,7 +81,7 @@ ifeq ($(CONFIG_RTL8192C), y)
 RTL871X = rtl8192c
 
 ifeq ($(CONFIG_USB_HCI), y)
-MODULE_NAME = rtl8192cu
+MODULE_NAME = 8192cu
 FW_FILES := hal/Hal8192CUHWImg.o
 ifneq ($(CONFIG_WAKE_ON_WLAN), n)
 FW_FILES += hal/Hal8192CUHWImg_wowlan.o
