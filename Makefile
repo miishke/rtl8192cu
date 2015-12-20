@@ -81,7 +81,7 @@ ifeq ($(CONFIG_RTL8192C), y)
 RTL871X = rtl8192c
 
 ifeq ($(CONFIG_USB_HCI), y)
-MODULE_NAME = 8192cu
+MODULE_NAME = rtl8192cu
 FW_FILES := hal/Hal8192CUHWImg.o
 ifneq ($(CONFIG_WAKE_ON_WLAN), n)
 FW_FILES += hal/Hal8192CUHWImg_wowlan.o
@@ -574,7 +574,7 @@ strip:
 install:
 	install -p -m 644 $(MODULE_NAME).ko  $(MODDESTDIR)
 	/sbin/depmod -a ${KVER}
-	cp ./{8192cu.conf, blacklist_rtl8192.conf} /etc/modprobe.d/
+	cp ./{rtl8192cu.conf, blacklist_rtl_native.conf} /etc/modprobe.d/
 
 uninstall:
 	rm -f $(MODDESTDIR)/$(MODULE_NAME).ko
