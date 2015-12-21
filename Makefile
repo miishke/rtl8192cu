@@ -574,7 +574,7 @@ strip:
 install:
 	install -p -m 644 $(MODULE_NAME).ko  $(MODDESTDIR)
 	/sbin/depmod -a ${KVER}
-	cp ./{rtl8192cu.conf, blacklist_rtl_native.conf} /etc/modprobe.d/
+	cp rtl8192cu.conf /etc/modprobe.d/
 
 uninstall:
 	rm -f $(MODDESTDIR)/$(MODULE_NAME).ko
